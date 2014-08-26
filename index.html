@@ -1,0 +1,61 @@
+<html ng-app="londonWDI7App">
+<head>
+  <title>WDI 7</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  
+    <nav>
+      <h1>Welcome to the WDI 7 Students WordSearch</h1>
+    </nav>
+  </br>
+    <div ng-controller="StudentsController">
+    <div ng-show="selectedStudent" class="profile">
+      <input ng-model="search" placeholder="Search here"/>
+    </br>
+      <img src={{selectedStudent.image}}, width=200px class="profile_pic" >
+      <h1>{{ selectedStudent.first_name }} {{ selectedStudent.last_name }}</h1>
+      <p class="para">{{ selectedStudent.about }}</p>
+      <a href={{selectedStudent.twitter}} target="_blank"><img src="public/twitter_icon.png", width=50px class="tag"></a>  <a href={{selectedStudent.github}} target="_blank"><img src="public/github_icon.png", width=50px class="tag"></a>  <a href={{selectedStudent.email}}><img src="public/download.png", width=50px class="tag"></a>
+    </div>
+    <div ng-hide="selectedStudent" class="profile">
+      <input ng-model="search" placeholder="Search here"/>
+      <p>Welcome ot the Student Directory for General Assembly WDI 7.  Please explore everyones profiles and get in touch.</p>
+    </div>
+  </br>
+    <table>
+      <tbody>
+        <tr ng-repeat="student in students | filter: {first_name: search}" ng-click="selectStudent(student)" ng-class="{highlighted: student === selectedStudent}">
+        <td>{{student.string[0]}}</td>
+        <td>{{student.string[1]}}</td>
+        <td>{{student.string[2]}}</td>
+        <td>{{student.string[3]}}</td>
+        <td>{{student.string[4]}}</td>
+        <td>{{student.string[5]}}</td>
+        <td>{{student.string[6]}}</td>
+        <td>{{student.string[7]}}</td>
+        <td>{{student.string[8]}}</td>
+        <td>{{student.string[9]}}</td>
+        <td>{{student.string[10]}}</td>
+        <td>{{student.string[11]}}</td>
+        <td>{{student.string[12]}}</td>
+        <td>{{student.string[13]}}</td>
+        <td>{{student.string[14]}}</td>
+        <td>{{student.string[15]}}</td>
+      </tr>      
+      </tbody>
+    </table>
+
+
+
+    
+  
+
+
+
+
+  </div>
+</body>
+</html>

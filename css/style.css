@@ -1,0 +1,99 @@
+*{
+  box-sizing: border-box;
+  font-family: Verdana;
+  margin: 0 auto;
+}
+body div.ng-scope{
+  text-align: center;
+  width: 960px;
+}
+nav {
+  border: 2px solid black;
+  width: 100%;
+  background-color: #C0C0C0;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 22px;
+  text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; 
+}
+.ng-valid {
+  display: block;
+  padding: 5px;
+}
+
+table {
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+td {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: rgba(255,0,0,1);
+  color: white;
+  text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000; 
+}
+tr.highlighted td {
+  color: rgba(255,0,0,1);
+  text-shadow:
+      -1px -1px 0 #ff0000,
+      1px -1px 0 #ff0000,
+      -1px 1px 0 #ff0000,
+      1px 1px 0 #ff0000;
+}
+.profile {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 50px;
+  background-color: #C0C0C0;
+}
+.profile img.profile_pic {
+  border: 10px solid black;
+  border-radius: 50px;
+}
+.profile p {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 960px) { 
+  body div.ng-scope{
+    width: 640px;
+  }
+  nav{
+    padding: 15px;
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  body div.ng-scope{
+    width: 320px;
+  }
+  table {
+    padding: 5px;
+    font-size: 10px;
+    font-weight: normal;
+  }
+  td {
+    border-radius: 5px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;  
+  }
+  .profile p.para {
+    display: none;
+  }
+
+}
