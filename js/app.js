@@ -19,14 +19,19 @@
           var array = random.slice(0, number);
           var newstring = array.substring(0,integer) + student.first_name.toUpperCase() + array.substring(integer);
           student["string"] = newstring
+          student["other"] = newstring
           console.log(random)
 
             };
       $scope.selectStudent = function(student){
         $scope.selectedStudent = student;
-        
       };
-
+      $scope.hoverIn = function(student){
+        student["string"] = student.first_name;
+          };
+      $scope.hoverOut = function(student){
+        student["string"] = student.other;
+          };
   }]);
   students = [  
     {  

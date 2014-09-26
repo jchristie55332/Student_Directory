@@ -27,7 +27,7 @@
   </br>
     <table>
       <tbody>
-        <tr ng-repeat="student in students | filter: {first_name: search}" ng-click="selectStudent(student)" ng-class="{highlighted: student === selectedStudent}">
+        <tr ng-repeat="student in students | filter: {first_name: search}" ng-click="selectStudent(student)" ng-class="{highlighted: student === selectedStudent}" ng-mouseover="hoverIn(student)" ng-mouseleave="hoverOut(student)">
         <td>{{student.string[0]}}</td>
         <td>{{student.string[1]}}</td>
         <td>{{student.string[2]}}</td>
@@ -47,15 +47,6 @@
       </tr>      
       </tbody>
     </table>
-
-
-
-    
-  
-
-
-
-
-  </div>
+</div>
 </body>
 </html>
